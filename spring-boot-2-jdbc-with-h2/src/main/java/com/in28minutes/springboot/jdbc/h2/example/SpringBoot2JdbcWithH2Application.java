@@ -18,6 +18,7 @@ public class SpringBoot2JdbcWithH2Application implements CommandLineRunner {
 	@Autowired
 	StudentJdbcRepository repository;
 
+	//writing from sts in main mentod
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBoot2JdbcWithH2Application.class, args);
 	}
