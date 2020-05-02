@@ -18,13 +18,14 @@ public class SpringBoot2JdbcWithH2Application implements CommandLineRunner {
 	@Autowired
 	StudentJdbcRepository repository;
 
+	//writing from sts in main mentod2 time 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBoot2JdbcWithH2Application.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-
+		logger.info("Student id 10001 -> {}", repository.findById(10001L));
 		logger.info("Student id 10001 -> {}", repository.findById(10001L));
 
 		logger.info("Inserting -> {}", repository.insert(new Student(10010L, "John", "A1234657")));
